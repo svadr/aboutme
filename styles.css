@@ -374,6 +374,7 @@ h1 {
 
   .bio {
     gap: 18px;
+    text-align: center;
   }
 
   .contact {
