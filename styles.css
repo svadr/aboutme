@@ -167,6 +167,7 @@ h1 {
 /* ---------- Workflow ---------- */
 
 .workflow {
+  container-type: inline-size;
   margin: 12px 0 4px;
   display: flex;
   flex-direction: column;
@@ -178,8 +179,15 @@ h1 {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
+}
+
+/* Stack the cards rather than leaving one orphaned on a second row */
+@container (max-width: 540px) {
+  .pillars {
+    grid-template-columns: 1fr;
+  }
 }
 
 .pillar {
